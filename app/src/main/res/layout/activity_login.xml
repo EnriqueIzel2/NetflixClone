@@ -46,4 +46,14 @@
         android:textColorHint="@color/white"
         android:textSize="18sp" />
 
+    <TextView
+        android:id="@+id/txt_error_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Coloque o seu email"
+        android:textColor="@color/orange"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
 </LinearLayout>
