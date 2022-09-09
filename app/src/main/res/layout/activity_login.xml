@@ -51,7 +51,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Coloque o seu email"
+        android:text=""
         android:textColor="@color/orange"
         android:textSize="18sp"
         android:textStyle="bold" />
@@ -80,6 +80,17 @@
         android:text="Precisa de ajuda?"
         android:textColor="@color/white"
         android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txt_link_to_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:text="Novo por aqui? Inscreva-se agora."
+        android:textColor="@color/white"
+        android:textSize="20sp"
         android:textStyle="bold" />
 
 </LinearLayout>
