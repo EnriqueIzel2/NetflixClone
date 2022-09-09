@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Netflix Clone</string>
+    <!--  Strart Login Screen -->
+    <string name="login_hint_email">Entrar</string>
+    <string name="login_hint_password">Senha</string>
+    <string name="login_button_login">Entrar</string>
+    <string name="login_txt_help_message">Precisa de ajuda?</string>
+    <string name="login_txt_link_to_register">Novo por aqui? Inscreva-se agora.</string>
+    <!--  End Login Screen -->
+
 </resources>
