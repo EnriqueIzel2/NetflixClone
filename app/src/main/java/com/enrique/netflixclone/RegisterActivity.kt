@@ -13,5 +13,9 @@ class RegisterActivity : AppCompatActivity() {
     setContentView(binding.root)
 
     supportActionBar!!.hide()
+
+    val toobar = binding.toolbarRegister
+    toobar.setBackgroundColor(getColor(R.color.white))
+    toobar.setNavigationIcon(getDrawable(R.drawable.ic_netflix_official_logo))
   }
 }
