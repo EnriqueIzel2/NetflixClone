@@ -12,6 +12,7 @@
     <string name="register_txt_subtitle">Crie sua conta.</string>
     <string name="register_hint_email">Email</string>
     <string name="register_hint_password">Senha</string>
+    <string name="register_button_text">Cadastrar</string>
     <!--  End Register Screen  -->
 
 </resources>
