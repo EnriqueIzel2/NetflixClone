@@ -11,6 +11,7 @@
     <string name="register_txt_title">Informe seu email e senha\npara iniciar sua assinatura</string>
     <string name="register_txt_subtitle">Crie sua conta.</string>
     <string name="register_hint_email">Email</string>
+    <string name="register_hint_password">Senha</string>
     <!--  End Register Screen  -->
 
 </resources>
