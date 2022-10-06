@@ -1,3 +1,3 @@
 # NetflixClone
 
-Clone da Netflix
+Clone da Netflix com Firebase
