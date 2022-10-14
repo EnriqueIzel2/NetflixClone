@@ -41,6 +41,7 @@ class RegisterActivity : AppCompatActivity() {
           Toast.makeText(this, "Usuário cadastrado com sucesso", Toast.LENGTH_SHORT).show()
           binding.editRegisterEmail.setText("")
           binding.editRegisterPassword.setText("")
+          binding.registerErroMessage.setText("")
         }
       }.addOnFailureListener {
         infoMessage.setText("Erro ao cadastrar usuário")
