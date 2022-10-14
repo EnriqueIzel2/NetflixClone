@@ -18,6 +18,11 @@ class RegisterActivity : AppCompatActivity() {
     binding.btnRegister.setOnClickListener {
       val email = binding.editRegisterEmail.text.toString()
       val password = binding.editRegisterPassword.text.toString()
+      val regErrorMessage = binding.registerErroMessage
+
+      if (email.isEmpty() || password.isEmpty()) {
+        regErrorMessage.setText("Preencha todos os campos")
+      }
     }
   }
 
