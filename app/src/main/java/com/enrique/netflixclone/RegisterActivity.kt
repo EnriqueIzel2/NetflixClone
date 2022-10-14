@@ -15,7 +15,10 @@ class RegisterActivity : AppCompatActivity() {
     supportActionBar!!.hide()
     setToolBar()
 
-
+    binding.btnRegister.setOnClickListener {
+      val email = binding.editRegisterEmail.text.toString()
+      val password = binding.editRegisterPassword.text.toString()
+    }
   }
 
   private fun setToolBar() {
