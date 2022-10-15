@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.widget.Toast
 import com.enrique.netflixclone.databinding.ActivityRegisterBinding
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseAuthUserCollisionException
+import com.google.firebase.auth.FirebaseAuthWeakPasswordException
 
 class RegisterActivity : AppCompatActivity() {
   private lateinit var binding: ActivityRegisterBinding
@@ -44,6 +46,13 @@ class RegisterActivity : AppCompatActivity() {
           binding.registerErroMessage.setText("")
         }
       }.addOnFailureListener {
+        var error = it
+
+        when (error) {
+          is FirebaseAuthWeakPasswordException -> infoMessage.setText("Senha deve ter no mínimo 6 caracteres")
+          is FirebaseAuthUserCollisionException -> infoMessage.setText("Email já cadastrado")
+        }
+
         infoMessage.setText("Erro ao cadastrar usuário")
       }
   }
