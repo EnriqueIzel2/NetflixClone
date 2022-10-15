@@ -51,9 +51,8 @@ class RegisterActivity : AppCompatActivity() {
         when (error) {
           is FirebaseAuthWeakPasswordException -> infoMessage.setText("Senha deve ter no mínimo 6 caracteres")
           is FirebaseAuthUserCollisionException -> infoMessage.setText("Email já cadastrado")
+          else -> infoMessage.setText("Erro ao cadastrar usuário")
         }
-
-        infoMessage.setText("Erro ao cadastrar usuário")
       }
   }
 
