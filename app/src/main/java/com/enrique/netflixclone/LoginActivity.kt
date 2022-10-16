@@ -43,7 +43,14 @@ class LoginActivity : AppCompatActivity() {
     FirebaseAuth.getInstance().signInWithEmailAndPassword(email, password).addOnCompleteListener {
       if (it.isSuccessful) {
         Toast.makeText(this, "Login efetuado com sucesso", Toast.LENGTH_SHORT).show()
+        goToListMovies()
       }
     }
+  }
+
+  private fun goToListMovies() {
+    val intent = Intent(this, ListMoviesActivity::class.java)
+    startActivity(intent)
+    finish()
   }
 }
