@@ -45,6 +45,8 @@ class LoginActivity : AppCompatActivity() {
         Toast.makeText(this, "Login efetuado com sucesso", Toast.LENGTH_SHORT).show()
         goToListMovies()
       }
+    }.addOnFailureListener {
+      loginErrorMessage.setText("Erro ao realizar login")
     }
   }
 
