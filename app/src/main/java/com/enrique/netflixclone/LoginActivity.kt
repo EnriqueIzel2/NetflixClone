@@ -3,6 +3,7 @@ package com.enrique.netflixclone
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import com.enrique.netflixclone.databinding.ActivityLoginBinding
 import com.google.firebase.auth.FirebaseAuth
 
@@ -34,13 +35,15 @@ class LoginActivity : AppCompatActivity() {
     }
   }
 
-  private fun authenticateUser(){
+  private fun authenticateUser() {
     val email = binding.editTextEmail.text.toString()
     val password = binding.editTextPassword.text.toString()
     val loginErrorMessage = binding.txtErrorMessage
 
     FirebaseAuth.getInstance().signInWithEmailAndPassword(email, password).addOnCompleteListener {
-
+      if (it.isSuccessful) {
+        Toast.makeText(this, "Login efetuado com sucesso", Toast.LENGTH_SHORT).show()
+      }
     }
   }
 }
