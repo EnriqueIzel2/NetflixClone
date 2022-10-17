@@ -17,6 +17,7 @@ class LoginActivity : AppCompatActivity() {
     setContentView(binding.root)
 
     supportActionBar!!.hide()
+    verifyUserLogged()
 
     binding.txtLinkToRegister.setOnClickListener {
       val intent = Intent(this, RegisterActivity::class.java)
@@ -52,6 +53,14 @@ class LoginActivity : AppCompatActivity() {
         is FirebaseAuthInvalidCredentialsException -> loginErrorMessage.setText("Email ou senha estão incorretos")
         else -> loginErrorMessage.setText("Erro ao realizar login")
       }
+    }
+  }
+
+  private fun verifyUserLogged() {
+    val userLogged = FirebaseAuth.getInstance().currentUser
+
+    if (userLogged != null) {
+      goToListMovies()
     }
   }
 
