@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Toast
 import com.enrique.netflixclone.databinding.ActivityLoginBinding
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
 
 class LoginActivity : AppCompatActivity() {
   private lateinit var binding: ActivityLoginBinding
@@ -46,7 +47,11 @@ class LoginActivity : AppCompatActivity() {
         goToListMovies()
       }
     }.addOnFailureListener {
-      loginErrorMessage.setText("Erro ao realizar login")
+      var error = it
+      when (error) {
+        is FirebaseAuthInvalidCredentialsException -> loginErrorMessage.setText("Email ou senha estão incorretos")
+        else -> loginErrorMessage.setText("Erro ao realizar login")
+      }
     }
   }
 
