@@ -15,6 +15,8 @@ class ListMoviesActivity : AppCompatActivity() {
     super.onCreate(savedInstanceState)
     binding = ActivityListMoviesBinding.inflate(layoutInflater)
     setContentView(binding.root)
+
+    val recyclerMovies = binding.listMovieRecyclerView
   }
 
   override fun onCreateOptionsMenu(menu: Menu): Boolean {
