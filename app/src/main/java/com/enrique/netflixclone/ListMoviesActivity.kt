@@ -1,12 +1,15 @@
 package com.enrique.netflixclone
 
+import adapter.MoviesAdapter
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import androidx.recyclerview.widget.GridLayoutManager
 import com.enrique.netflixclone.databinding.ActivityListMoviesBinding
 import com.google.firebase.auth.FirebaseAuth
+import model.addMovies
 
 class ListMoviesActivity : AppCompatActivity() {
   private lateinit var binding: ActivityListMoviesBinding
@@ -17,6 +20,8 @@ class ListMoviesActivity : AppCompatActivity() {
     setContentView(binding.root)
 
     val recyclerMovies = binding.listMovieRecyclerView
+    recyclerMovies.adapter = MoviesAdapter(addMovies())
+    recyclerMovies.layoutManager = GridLayoutManager(applicationContext, 3)
   }
 
   override fun onCreateOptionsMenu(menu: Menu): Boolean {
