@@ -7,7 +7,7 @@ import com.enrique.netflixclone.databinding.MoviesListBinding
 import model.Movies
 
 class MoviesAdapter(val movies: MutableList<Movies>) :
-  RecyclerView.Adapter<MoviesAdapter.MovieViewHolder>() {
+  RecyclerView.Adapter<MoviesAdapter.MoviesViewHolder>() {
   inner class MoviesViewHolder(val binding: MoviesListBinding) :
     RecyclerView.ViewHolder(binding.root) {
 
@@ -15,12 +15,15 @@ class MoviesAdapter(val movies: MutableList<Movies>) :
 
   override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MoviesViewHolder {
     val binding = MoviesListBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-
     return MoviesViewHolder(binding)
   }
 
   override fun onBindViewHolder(holder: MoviesViewHolder, position: Int) {
-    TODO("no yet")
+    with(holder) {
+      with(movies[position]) {
+        binding.listMovieCover.setImageResource(movieCover)
+      }
+    }
   }
 
   override fun getItemCount() = movies.size
