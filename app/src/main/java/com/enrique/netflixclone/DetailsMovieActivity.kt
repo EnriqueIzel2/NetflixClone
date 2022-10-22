@@ -11,5 +11,8 @@ class DetailsMovieActivity : AppCompatActivity() {
     super.onCreate(savedInstanceState)
     binding = ActivityDetailsMovieBinding.inflate(layoutInflater)
     setContentView(binding.root)
+
+    supportActionBar!!.hide()
+
   }
 }
