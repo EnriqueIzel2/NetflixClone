@@ -1,11 +1,11 @@
 package com.enrique.netflixclone
 
 import adapter.MoviesAdapter
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import com.enrique.netflixclone.databinding.ActivityDetailsMovieBinding
+import com.squareup.picasso.Picasso
 import model.addMovies
 
 class DetailsMovieActivity : AppCompatActivity() {
@@ -22,6 +22,11 @@ class DetailsMovieActivity : AppCompatActivity() {
     val recyclerMoreMovies = binding.detailsMovieMoreMovies
     recyclerMoreMovies.adapter = MoviesAdapter(addMovies())
     recyclerMoreMovies.layoutManager = GridLayoutManager(applicationContext, 3)
+
+    val trailerCover =
+      "https://firebasestorage.googleapis.com/v0/b/netflix-clone-a97d0.appspot.com/o/video.jpg?alt=media&token=44cacbce-d505-4048-a234-3b71d5c79e2f"
+
+    Picasso.get().load(trailerCover).fit().into(binding.detailsMovieCover)
   }
 
   private fun manageToolbal() {
