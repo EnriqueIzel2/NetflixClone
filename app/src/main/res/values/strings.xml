@@ -16,5 +16,9 @@
     <!--  End Register Screen  -->
     <!--  Start Menu  -->
     <string name="menu_btn_logout">Deslogar</string>
+    <!--  End Menu  -->
+    <!--  Start Details Movie  -->
+    <string name="details_movie_title">The Witcher</string>
+    <!--  End Details Movie  -->
 
 </resources>
