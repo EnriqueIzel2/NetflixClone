@@ -1,6 +1,7 @@
 package com.enrique.netflixclone
 
 import adapter.MoviesAdapter
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
@@ -27,6 +28,11 @@ class DetailsMovieActivity : AppCompatActivity() {
       "https://firebasestorage.googleapis.com/v0/b/netflix-clone-a97d0.appspot.com/o/video.jpg?alt=media&token=44cacbce-d505-4048-a234-3b71d5c79e2f"
 
     Picasso.get().load(trailerCover).fit().into(binding.detailsMovieCover)
+
+    binding.detailsMoviePlayVideo.setOnClickListener {
+      val intent = Intent(this, VideoActivity::class.java)
+      startActivity(intent)
+    }
   }
 
   private fun manageToolbal() {
