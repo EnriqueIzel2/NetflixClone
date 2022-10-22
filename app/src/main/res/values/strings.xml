@@ -19,6 +19,9 @@
     <!--  End Menu  -->
     <!--  Start Details Movie  -->
     <string name="details_movie_title">The Witcher</string>
+    <string name="details_movie_description">
+        O mutante Geralt de Rívia é um caçador de monstros que luta para encontrar seu lugar num mundo onde as pessoas muitas vezes são mais perversas que as criaturas selvagens.
+    </string>
     <!--  End Details Movie  -->
 
 </resources>
