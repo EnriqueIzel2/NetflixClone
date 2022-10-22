@@ -19,9 +19,8 @@
     <!--  End Menu  -->
     <!--  Start Details Movie  -->
     <string name="details_movie_title">The Witcher</string>
-    <string name="details_movie_description">
-        O mutante Geralt de Rívia é um caçador de monstros que luta para encontrar seu lugar num mundo onde as pessoas muitas vezes são mais perversas que as criaturas selvagens.
-    </string>
+    <string name="details_movie_description">O mutante Geralt de Rívia é um caçador de monstros que luta para encontrar seu lugar num mundo onde as pessoas muitas vezes são mais perversas que as criaturas selvagens.</string>
+    <string name="details_movie_movie_cast">Estrelando:Henry Cavill,Anya Chalotra,Freya Allan  Criação:Lauren Schmidt Hissrich</string>
     <!--  End Details Movie  -->
 
 </resources>
