@@ -26,16 +26,16 @@ class ListMoviesActivity : AppCompatActivity() {
     recyclerMovies.adapter = MoviesAdapter(addMovies())
     recyclerMovies.layoutManager = GridLayoutManager(applicationContext, 3)
 
-    recyclerMovies.addOnItemClickListener(object: OnItemClickListener{
+    recyclerMovies.addOnItemClickListener(object : OnItemClickListener {
       override fun onItemClicked(position: Int, view: View) {
-        when{
+        when {
           position == 0 -> navigateToDetails()
         }
       }
     })
   }
 
-  private fun navigateToDetails(){
+  private fun navigateToDetails() {
     val intent = Intent(this, DetailsMovieActivity::class.java)
     startActivity(intent)
   }
