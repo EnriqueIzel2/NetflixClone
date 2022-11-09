@@ -2,6 +2,7 @@
 
 <p align="center">
   Clone do aplicativo Netflix. Este projeto tem como objetivo apenas exercitar a construção de telas.
+  (Não teminado)
 </p>
 
 ---
